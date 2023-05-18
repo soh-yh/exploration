@@ -29,6 +29,12 @@ PRT(PeerReviewTemplate)
 
 # 파일 용량을 경량화 하기 위한 방법입니다.
 ## datetime 자료형을 연, 월, 일, 시, 분, 초 6가지로 분리하기
-[개선전] train['month'] = pd.DatetimeIndex(train['datetime']).month
-[개선후] train['month'] = train['datetime'].dt.month 
+- [개선전] 
+```python
+train['month'] = pd.DatetimeIndex(train['datetime']).month
+```
+- [개선후] 
+```python
+train['month'] = train['datetime'].dt.month 
+```
 
